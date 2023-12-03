@@ -1,0 +1,3 @@
+ [build]
+  command = "npm run build"　　# ビルドコマンドを指定
+  publish = ".next"　　　　　　　# ビルドされたファイルが存在するディレクトリを指定
