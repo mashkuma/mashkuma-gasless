@@ -13,7 +13,7 @@ export default function Home() {
       <h1 className={styles.pageTitle}>
         ましゅくまアイコンをもらおう！
       </h1>
-      <img src="/icon-sample.png" alt="サンプル画像" className={styles.image} />
+      <img src="/icon-sample.jpeg" alt="サンプル画像" className={styles.image} />
       <p className={styles.customParagraph1}>
         ↓Get it from here!↓
       </p>
