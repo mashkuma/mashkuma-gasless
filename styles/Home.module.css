@@ -16,12 +16,6 @@
   margin-bottom: 0px;
 }
 
-.image {
-  width: 100%; /* 画像を親要素の幅に合わせる */
-  max-width: 400px; /* 画像の最大幅を設定 */
-  margin-top: 20px; /* 画像と前の要素の間に余白を追加 */
-}
-
 .button-container {
   display: flex;
   justify-content: center;
