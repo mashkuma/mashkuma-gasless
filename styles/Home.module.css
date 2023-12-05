@@ -1,7 +1,62 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   height: 100vh;
+  background-color: #FFABBC; /* 背景色を追加 */
+  padding: 12px; /* 余白を追加 */
+}
+
+.pageTitle {
+  font-size: 36px;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.image {
+  width: 100%; /* 画像を親要素の幅に合わせる */
+  max-width: 400px; /* 画像の最大幅を設定 */
+  margin-top: 20px; /* 画像と前の要素の間に余白を追加 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.customParagraph1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #522F22;
+}
+
+.customParagraph2 {
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  .pageTitle {
+    font-size: 24px;
+  }
+  .customParagraph1 {
+    font-size: 20px;
+  }
+  .customParagraph2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pageTitle {
+    font-size: 18px;
+  }
+  .customParagraph1 {
+    font-size: 16px;
+  }
+  .customParagraph2 {
+    font-size: 15px;
+  }
 }
