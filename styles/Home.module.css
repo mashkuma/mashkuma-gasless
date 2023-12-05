@@ -17,8 +17,20 @@
 }
 
 .button-container {
+  all: unset;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* 要素を縦に並べる */
+  align-items: center;    /* 要素を中央に配置 */
+  justify-content: center; /* 必要に応じて追加 */
+}
+
+.walletContainer {
+  padding: 3.435px; /* 余白を追加 */
+  width: 100%; /* ボタンが親要素に広がるようにする */
+}
+
+.buttonWrapper {
+  width: 100%; /* ボタンが親要素に広がるようにする */
 }
 
 .customParagraph1 {
