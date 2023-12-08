@@ -86,15 +86,23 @@ export default function Home() {
         )}
       </h2>
 
-      {ownedTokenIds.length > 0 && (
-  <div className={styles.nftContainer}>
-    {ownedTokenIds.map((tokenId) => (
-      <div key={tokenId} className={styles.nftItem}>
-        <NFTDisplay contract={contract} tokenId={tokenId} />
-      </div>
-    ))}
-  </div>
-)}
+      {ownedTokenIds.length > 0 ? (
+        <div className={styles.nftContainer}>
+          {ownedTokenIds.map((tokenId) => (
+            <div key={tokenId} className={styles.nftItem}>
+              <NFTDisplay contract={contract} tokenId={tokenId} />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className={styles.nftContainer}>
+          <div className={styles.customParagraph2}>
+          {connectionStatus == "connected" && (
+          <>NFT not found</>
+        )}
+          </div>
+        </div>
+      )}
 
       <p className={styles.customParagraph2} onClick={handleLogoClick}>
         ▷back to official site◁
