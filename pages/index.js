@@ -54,6 +54,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1 className={styles.pageTitle}>ましゅくまアイコンをもらおう！</h1>
+      {connectionStatus !== "connected" && (
+  <div>
+    <img src="/main.png" alt="Main" className={styles.imageContainer} />
+  </div>
+)}
       <p className={styles.customParagraph1}>↓Get it from here!↓</p>
       <div className={styles.buttonContainer}>
         <div className={styles.walletContainer}>
