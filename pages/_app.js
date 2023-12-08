@@ -1,4 +1,12 @@
-import { ThirdwebProvider, ChainId } from "@thirdweb-dev/react";
+import { 
+  ThirdwebProvider,
+  ChainId,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  localWallet,
+  embeddedWallet,
+  trustWallet, } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -6,7 +14,24 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThirdwebProvider
       activeChain="polygon"
-      clientId="20d4b97fb1686bd8f88bab13eea50c6c"
+      clientId={process.env.TW_CLIENT_ID}
+      supportedWallets={[
+        metamaskWallet(),
+        coinbaseWallet({ recommended: true }),
+        walletConnect(),
+        localWallet(),
+        embeddedWallet({
+          auth: {
+            options: [
+              "email",
+              "google",
+              "apple",
+              "facebook",
+            ],
+          },
+        }),
+        trustWallet({ recommended: true }),
+      ]}
       sdkOptions={{
         gasless: {
           openzeppelin: {
