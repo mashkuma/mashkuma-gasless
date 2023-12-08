@@ -8,14 +8,14 @@
   height: 100vh;
   background-color: #FFABBC; /* 背景色を追加 */
   padding: 12px; /* 余白を追加 */
+  font-family: 'Zen Maru Gothic', serif;
 }
 
 .pageTitle {
   font-size: 36px;
-  font-family: "Zen Maru Gothic", sans-serif;
-  font-weight: bold;
   color: white;
   margin-bottom: 0px;
+  font-weight: 700;
 }
 
 .button-container {
@@ -27,13 +27,33 @@
 }
 
 .walletContainer {
-  padding: 3.435px; /* 余白を追加 */
+  width: 300px;
+  padding: 5px; /* 余白を追加 */
   width: 100%; /* ボタンが親要素に広がるようにする */
 }
 
 .buttonWrapper {
-  width: 100%; /* ボタンが親要素に広がるようにする */
+  text-align: center; /* 子要素を中央寄せにするために親要素に text-align を追加 */
 }
+
+.imageContainer {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Home.module.css */
+.nftContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap as needed */
+}
+
+.nftItem {
+  flex: 0 0 calc(33.33% - 16px); /* Adjust the width of each item */
+  margin-bottom: 16px; /* Adjust the margin as needed */
+}
+
 
 .customParagraph1 {
   font-size: 28px;
@@ -54,6 +74,9 @@
   }
   .customParagraph2 {
     font-size: 16px;
+  }
+  .nftImage {
+    width: 300;
   }
 }
 
